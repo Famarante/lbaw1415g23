@@ -1,0 +1,4 @@
+- listar os produtos por categorias
+- fazer promoçoes
+- linguagem coerente
+- separar por varias tabelas
