@@ -101,6 +101,7 @@ CREATE TABLE Produto(
 	disponibilidade BOOLEAN NOT NULL,
 	nome VARCHAR NOT NULL,
 	preco NUMERIC NOT NULL,
+	stock INTEGER NOT NULL,
 	idCor SERIAL REFERENCES Cor(idCor),
 	idVersao SERIAL REFERENCES Versao(idVersao),
 	idCategoria SERIAL REFERENCES Categoria(idCategoria)

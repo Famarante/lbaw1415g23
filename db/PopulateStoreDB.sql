@@ -56,16 +56,16 @@ INSERT INTO "cor" (nome) VALUES ('Indefinido'), ('Preto'), ('Branco'), ('Azul'),
 INSERT INTO "categoria" (nome) VALUES ('Processadores'), ('Placas gráficas'), ('Monitores'), ('Placas de Som'), ('Tablets'), ('Motherboards'), ('Computadores'), ('Portáteis'), ('Memórias RAM'), ('Ratos');
 
 /*! Insert products data into Produto table */
-INSERT INTO "produto" (descricao, disponibilidade, nome, preco, idcor, idversao, idcategoria) VALUES ('Texto com a a descrição do produto', true, 'Aspire', 975.99, 2, 1, 8);
-INSERT INTO "produto" (descricao, disponibilidade, nome, preco, idcor, idversao, idcategoria) VALUES ('Texto com a a descrição do produto', true, 'H6 Series', 199.99, 2, 2, 3);
-INSERT INTO "produto" (descricao, disponibilidade, nome, preco, idcor, idversao, idcategoria) VALUES ('Texto com a a descrição do produto', false, 'G7 Series ', 275.90, 1, 3, 3);
-INSERT INTO "produto" (descricao, disponibilidade, nome, preco, idcor, idversao, idcategoria) VALUES ('Texto com a a descrição do produto', true, 'Iconia Tab', 99.99, 3, 4, 5);
-INSERT INTO "produto" (descricao, disponibilidade, nome, preco, idcor, idversao, idcategoria) VALUES ('Texto com a a descrição do produto', true, 'Desktop PC', 975.99, 1, 5, 7);
-INSERT INTO "produto" (descricao, disponibilidade, nome, preco, idcor, idversao, idcategoria) VALUES ('Texto com a a descrição do produto', true, 'Radeon R9', 405.90, 2, 6, 2);
-INSERT INTO "produto" (descricao, disponibilidade, nome, preco, idcor, idversao, idcategoria) VALUES ('Texto com a a descrição do produto', true, 'GeForce GTX', 790.99, 2, 7, 2);
-INSERT INTO "produto" (descricao, disponibilidade, nome, preco, idcor, idversao, idcategoria) VALUES ('Texto com a a descrição do produto', true, 'Desktop PC', 1199.99, 1, 8, 7);
-INSERT INTO "produto" (descricao, disponibilidade, nome, preco, idcor, idversao, idcategoria) VALUES ('Texto com a a descrição do produto', true, 'Xonar Essence', 79.99, 1, 9, 4);
-INSERT INTO "produto" (descricao, disponibilidade, nome, preco, idcor, idversao, idcategoria) VALUES ('Texto com a a descrição do produto', true, 'MAXIMUS VI', 280.00, 2, 10, 6);
+INSERT INTO "produto" (descricao, disponibilidade, nome, preco, stock, idcor, idversao, idcategoria) VALUES ('Texto com a a descrição do produto', true, 'Aspire', 975.99, 20, 2, 1, 8);
+INSERT INTO "produto" (descricao, disponibilidade, nome, preco, stock, idcor, idversao, idcategoria) VALUES ('Texto com a a descrição do produto', true, 'H6 Series', 199.99, 20, 2, 2, 3);
+INSERT INTO "produto" (descricao, disponibilidade, nome, preco, stock, idcor, idversao, idcategoria) VALUES ('Texto com a a descrição do produto', false, 'G7 Series ', 275.90, 20, 1, 3, 3);
+INSERT INTO "produto" (descricao, disponibilidade, nome, preco, stock, idcor, idversao, idcategoria) VALUES ('Texto com a a descrição do produto', true, 'Iconia Tab', 99.99, 20, 3, 4, 5);
+INSERT INTO "produto" (descricao, disponibilidade, nome, preco, stock, idcor, idversao, idcategoria) VALUES ('Texto com a a descrição do produto', true, 'Desktop PC', 975.99, 20, 1, 5, 7);
+INSERT INTO "produto" (descricao, disponibilidade, nome, preco, stock, idcor, idversao, idcategoria) VALUES ('Texto com a a descrição do produto', true, 'Radeon R9', 405.90, 20, 2, 6, 2);
+INSERT INTO "produto" (descricao, disponibilidade, nome, preco, stock, idcor, idversao, idcategoria) VALUES ('Texto com a a descrição do produto', true, 'GeForce GTX', 790.99, 20, 2, 7, 2);
+INSERT INTO "produto" (descricao, disponibilidade, nome, preco, stock, idcor, idversao, idcategoria) VALUES ('Texto com a a descrição do produto', true, 'Desktop PC', 1199.99, 20, 1, 8, 7);
+INSERT INTO "produto" (descricao, disponibilidade, nome, preco, stock, idcor, idversao, idcategoria) VALUES ('Texto com a a descrição do produto', true, 'Xonar Essence', 79.99, 20, 1, 9, 4);
+INSERT INTO "produto" (descricao, disponibilidade, nome, preco, stock, idcor, idversao, idcategoria) VALUES ('Texto com a a descrição do produto', true, 'MAXIMUS VI', 280.00, 20, 2, 10, 6);
 
 /*! Insert comment data into Comentario table */
 INSERT INTO "comentario" (data, texto, idutilizador, idproduto) VALUES ('2015-04-08 12:21:13', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maximus feugiat nibh, eu ullamcorper nisi. Duis laoreet vulputate euismod. Nullam.', 1, 1);
