@@ -95,16 +95,16 @@ INSERT INTO "feedback" (rating, idcliente, idproduto) VALUES (4.6, 8, 6);
 INSERT INTO "estadoencomenda" (nome) VALUES ('Recebida'), ('A processar'), ('Processada e pronta a expedir'), ('Enviada'), ('Entregue e finalizada');
 
 /*! Insert order data into Encomenda table */
-INSERT INTO "encomenda" (codigoencomenda, dataencomenda, total, idcliente, idestadoencomenda) VALUES (1000, '2015-04-10 07:49:00', 2927.97, 1, 1);
-INSERT INTO "encomenda" (codigoencomenda, dataencomenda, total, idcliente, idestadoencomenda) VALUES (1001, '2015-04-10 03:20:34', 179.98, 1, 2);
-INSERT INTO "encomenda" (codigoencomenda, dataencomenda, total, idcliente, idestadoencomenda) VALUES (1002, '2015-04-11 05:46:43', 1584.98, 1, 5);
-INSERT INTO "encomenda" (codigoencomenda, dataencomenda, total, idcliente, idestadoencomenda) VALUES (1003, '2015-04-11 08:00:32', 3151.97, 2, 3);
-INSERT INTO "encomenda" (codigoencomenda, dataencomenda, total, idcliente, idestadoencomenda) VALUES (1004, '2015-04-11 16:55:43', 675.88, 4, 1);
-INSERT INTO "encomenda" (codigoencomenda, dataencomenda, total, idcliente, idestadoencomenda) VALUES (1005, '2015-04-10 02:47:15', 4879.95, 4, 4);
-INSERT INTO "encomenda" (codigoencomenda, dataencomenda, total, idcliente, idestadoencomenda) VALUES (1006, '2015-04-10 03:50:21', 505.89, 5, 2);
-INSERT INTO "encomenda" (codigoencomenda, dataencomenda, total, idcliente, idestadoencomenda) VALUES (1007, '2015-04-10 03:16:12', 4309.86, 8, 1);
-INSERT INTO "encomenda" (codigoencomenda, dataencomenda, total, idcliente, idestadoencomenda) VALUES (1008, '2015-04-11 01:35:38', 3954.95, 9, 5);
-INSERT INTO "encomenda" (codigoencomenda, dataencomenda, total, idcliente, idestadoencomenda) VALUES (1009, '2015-04-11 01:19:33', 1618.95, 7, 3);
+INSERT INTO "encomenda" (codigoencomenda, dataencomenda, total, idmorada, idcliente, idestadoencomenda) VALUES (1000, '2015-04-10 07:49:00', 2927.97, 19, 1, 1);
+INSERT INTO "encomenda" (codigoencomenda, dataencomenda, total, idmorada, idcliente, idestadoencomenda) VALUES (1001, '2015-04-10 03:20:34', 179.98, 19, 1, 2);
+INSERT INTO "encomenda" (codigoencomenda, dataencomenda, total, idmorada, idcliente, idestadoencomenda) VALUES (1002, '2015-04-11 05:46:43', 1584.98, 19, 1, 5);
+INSERT INTO "encomenda" (codigoencomenda, dataencomenda, total, idmorada, idcliente, idestadoencomenda) VALUES (1003, '2015-04-11 08:00:32', 3151.97, 1, 2, 3);
+INSERT INTO "encomenda" (codigoencomenda, dataencomenda, total, idmorada, idcliente, idestadoencomenda) VALUES (1004, '2015-04-11 16:55:43', 675.88, 4, 4, 1);
+INSERT INTO "encomenda" (codigoencomenda, dataencomenda, total, idmorada, idcliente, idestadoencomenda) VALUES (1005, '2015-04-10 02:47:15', 4879.95, 4, 4, 4);
+INSERT INTO "encomenda" (codigoencomenda, dataencomenda, total, idmorada, idcliente, idestadoencomenda) VALUES (1006, '2015-04-10 03:50:21', 505.89, 9, 5, 2);
+INSERT INTO "encomenda" (codigoencomenda, dataencomenda, total, idmorada, idcliente, idestadoencomenda) VALUES (1007, '2015-04-10 03:16:12', 4309.86, 2, 8, 1);
+INSERT INTO "encomenda" (codigoencomenda, dataencomenda, total, idmorada, idcliente, idestadoencomenda) VALUES (1008, '2015-04-11 01:35:38', 3954.95, 3, 9, 5);
+INSERT INTO "encomenda" (codigoencomenda, dataencomenda, total, idmorada, idcliente, idestadoencomenda) VALUES (1009, '2015-04-11 01:19:33', 1618.95, 17, 7, 3);
 
 /*! Insert invoice data into Fatura table */
 INSERT INTO "fatura" (data, valor, idencomenda) VALUES ('2015-04-10 08:49:00', 2927.97, 1);

@@ -132,6 +132,7 @@ CREATE TABLE Encomenda(
 	codigoEncomenda INTEGER NOT NULL,
 	dataEncomenda TIMESTAMP NOT NULL,
 	total NUMERIC NOT NULL,
+	idMorada SERIAL REFERENCES Morada(idMorada),
 	idCliente SERIAL REFERENCES Cliente(idCliente),
 	idEstadoEncomenda SERIAL REFERENCES EstadoEncomenda(idEstadoEncomenda)
 );
