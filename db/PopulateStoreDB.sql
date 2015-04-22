@@ -1,3 +1,5 @@
+SET SCHEMA 'store';
+
 /*! Insert country data into País table */
 INSERT INTO "pais" (nome) VALUES ('Portugal'),('Espanha'),('França'),('Alemanha'),('Inglaterra'),('Suiça'),('Itália'),('Bélgica'),('Holanda'),('Rússia');
 
