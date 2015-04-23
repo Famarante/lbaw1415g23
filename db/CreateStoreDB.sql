@@ -158,5 +158,5 @@ CREATE TABLE LinhaFatura(
 /*! INDEXES */
 
 CREATE UNIQUE INDEX utiliz ON Utilizador USING btree (username);
-CREATE UNIQUE INDEX nomeCli ON Cliente USING btree (nome);
-CREATE UNIQUE INDEX precoProd ON Produto USING btree (preco);
+CREATE INDEX nomeCli ON Cliente USING btree (nome);
+CREATE INDEX precoProd ON Produto USING btree (preco);

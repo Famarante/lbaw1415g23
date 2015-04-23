@@ -1,0 +1,4 @@
+<?php
+  
+  //Código para comentarios
+?>
