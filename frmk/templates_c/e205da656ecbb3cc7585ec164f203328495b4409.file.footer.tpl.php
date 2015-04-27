@@ -1,4 +1,25 @@
-	<section id="modal-cart">
+<?php /* Smarty version Smarty-3.1.15, created on 2015-04-27 03:31:08
+         compiled from "E:\xampp\htdocs\xampp\frmk_loja\templates\common\footer.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:18204553d2d9c1d2c67-28642810%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'e205da656ecbb3cc7585ec164f203328495b4409' => 
+    array (
+      0 => 'E:\\xampp\\htdocs\\xampp\\frmk_loja\\templates\\common\\footer.tpl',
+      1 => 1430097984,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '18204553d2d9c1d2c67-28642810',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_553d2d9c1d7556_10294070',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_553d2d9c1d7556_10294070')) {function content_553d2d9c1d7556_10294070($_smarty_tpl) {?>	<section id="modal-cart">
    		<div class="modal fade" role="dialog" id="cart-modal" tabindex="-1" aria-labelledby="gridSystemModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -45,3 +66,4 @@
 
   </body>
 </html>
+<?php }} ?>

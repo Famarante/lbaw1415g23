@@ -1,4 +1,30 @@
-{include file='common/header.tpl'}
+<?php /* Smarty version Smarty-3.1.15, created on 2015-04-26 21:41:17
+         compiled from "E:\xampp\htdocs\xampp\frmk_loja\templates\users\register.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:30212553d2d4e3e36e2-47717050%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'a5eb6169a284e09db45b6d6e5ebcd5d56bbb0930' => 
+    array (
+      0 => 'E:\\xampp\\htdocs\\xampp\\frmk_loja\\templates\\users\\register.tpl',
+      1 => 1430077149,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '30212553d2d4e3e36e2-47717050',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_553d2d4e4b9940_62450446',
+  'variables' => 
+  array (
+    'BASE_URL' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_553d2d4e4b9940_62450446')) {function content_553d2d4e4b9940_62450446($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 
 <section id="register">
 	<div class="container" id="register">
@@ -9,7 +35,8 @@
                             <strong><h4>Registar</h4></strong>  
                         </div>
                         <div class="panel-body">
-                            <form role="form" id="register-form" action="{$BASE_URL}actions/users/register.php" method="post">
+                            <form role="form" id="register-form" action="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+actions/users/register.php" method="post">
                                 <br/>
                                     <div class="form-group">
                                     <label for="inputnome">Nome</label>
@@ -120,4 +147,6 @@
         </div>
 </section>
 
-{include file='common/footer.tpl'}
+<?php echo $_smarty_tpl->getSubTemplate ('common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<?php }} ?>

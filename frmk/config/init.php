@@ -1,11 +1,11 @@
 <?php
-  session_set_cookie_params(3600, '/~lbaw1423'); //FIXME
+  //session_set_cookie_params(3600, '/~lbaw1423'); //FIXME
   session_start();
 
   error_reporting(E_ERROR | E_WARNING); // E_NOTICE by default
 
-  $BASE_DIR = 'E:/xampp/htdocs/xampp/frmk/'; //FIXME
-  $BASE_URL = '/frmk/'; //FIXME
+  $BASE_DIR = 'E:/xampp/htdocs/xampp/frmk_loja/'; //FIXME
+  $BASE_URL = '/xampp/frmk_loja/'; //FIXME
 
   $conn = new PDO('pgsql:host=vdbm.fe.up.pt;dbname=lbaw1423', 'lbaw1423', 'rP298ck6'); //FIXME
   $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
@@ -25,6 +25,7 @@
   $smarty->assign('SUCCESS_MESSAGES', $_SESSION['success_messages']);
   $smarty->assign('FORM_VALUES', $_SESSION['form_values']);
   $smarty->assign('USERNAME', $_SESSION['username']);
+  $smarty->assign('USERID', $_SESSION['userid']);
   
   unset($_SESSION['success_messages']);
   unset($_SESSION['error_messages']);  

@@ -1,16 +1,47 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.1.15, created on 2015-04-27 03:16:24
+         compiled from "E:\xampp\htdocs\xampp\frmk_loja\templates\common\header.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:10221553d2d4e4dc130-59104823%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '0d3c187bcc464c583e507c5c3ce9948df671c39c' => 
+    array (
+      0 => 'E:\\xampp\\htdocs\\xampp\\frmk_loja\\templates\\common\\header.tpl',
+      1 => 1430097380,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '10221553d2d4e4dc130-59104823',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_553d2d4e5539f9_38481868',
+  'variables' => 
+  array (
+    'BASE_URL' => 0,
+    'USERNAME' => 0,
+  ),
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_553d2d4e5539f9_38481868')) {function content_553d2d4e5539f9_38481868($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>0100Tech - Loja Online</title>
-		<link href="{$BASE_URL}css/bootstrap.min.css" rel="stylesheet">
-		<link href="{$BASE_URL}css/styles.css" rel="stylesheet">
+		<link href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+css/bootstrap.min.css" rel="stylesheet">
+		<link href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+css/styles.css" rel="stylesheet">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <script src="{$BASE_URL}javascript/jquery.min.js"></script>
-        <Script src="{$BASE_URL}javascript/login.js"></Script>
-        <script src="{$BASE_URL}javascript/bootstrap.min.js"></script>
+        <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+javascript/jquery.min.js"></script>
+        <Script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+javascript/login.js"></Script>
+        <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+javascript/bootstrap.min.js"></script>
         <script>
             var activeEl = -1;
             $(function() {
@@ -28,11 +59,13 @@
 		
         <header id="header">
 		
-			{if $USERNAME}
-				{include file='common/header_logged_in.tpl'}
-			{else}
-				{include file='common/header_logged_out.tpl'}
-			{/if}
+			<?php if ($_smarty_tpl->tpl_vars['USERNAME']->value) {?>
+				<?php echo $_smarty_tpl->getSubTemplate ('common/header_logged_in.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+			<?php } else { ?>
+				<?php echo $_smarty_tpl->getSubTemplate ('common/header_logged_out.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+			<?php }?>
             
             <div class="header-middle">
                 <div class="container">
@@ -447,4 +480,4 @@
                     </div>
                 </div>
             </div>
-        </header>
+        </header><?php }} ?>
