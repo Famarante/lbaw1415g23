@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-04-26 23:20:50
+<?php /* Smarty version Smarty-3.1.15, created on 2015-05-09 19:29:53
          compiled from "E:\xampp\htdocs\xampp\frmk_loja\templates\common\header_logged_out.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:26767553d2d9c18e629-23749397%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'efcbc4fae1990bc50d27e7545c88d804e6049803' => 
     array (
       0 => 'E:\\xampp\\htdocs\\xampp\\frmk_loja\\templates\\common\\header_logged_out.tpl',
-      1 => 1430083227,
+      1 => 1431192591,
       2 => 'file',
     ),
   ),
@@ -58,7 +58,7 @@ actions/users/login.php" method="post">
             <div class="control-group">
               <label class="control-label" for="userid">Username:</label>
               <div class="controls">
-                <input required="" id="userid" name="username" type="text" class="form-control" placeholder="Introduza o seu username" class="input-medium" required="">
+                <input autofocus id="userid" name="username" type="text" class="form-control" placeholder="Introduza o seu username" class="input-medium" required="">
               </div>
             </div>
 

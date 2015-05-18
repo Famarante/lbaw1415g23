@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-04-27 02:02:10
+<?php /* Smarty version Smarty-3.1.15, created on 2015-05-11 01:39:52
          compiled from "E:\xampp\htdocs\xampp\frmk_loja\templates\common\header_logged_in.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:8626553d5a284eced7-83398974%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '66fc3ac09109e6a0c0ea29f407ab8ba06a75a7b9' => 
     array (
       0 => 'E:\\xampp\\htdocs\\xampp\\frmk_loja\\templates\\common\\header_logged_in.tpl',
-      1 => 1430092928,
+      1 => 1431301179,
       2 => 'file',
     ),
   ),
@@ -19,9 +19,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'unifunc' => 'content_553d5a288f7603_75152211',
   'variables' => 
   array (
+    'ADMIN_USERNAME' => 0,
     'BASE_URL' => 0,
-    'USERID' => 0,
     'USERNAME' => 0,
+    'USERID' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -32,10 +33,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<nav id="login-nav">
 					<ul>
 						<li id="login">
-							<a id="login-trigger" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+                            
+                            <?php if ($_smarty_tpl->tpl_vars['ADMIN_USERNAME']->value) {?>
+				            <a id="login-trigger" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/admin/admin.php" ><?php echo $_smarty_tpl->tpl_vars['USERNAME']->value;?>
+</a>
+			                 <?php } else { ?>
+				            <a id="login-trigger" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 pages/users/cliente-edit.php?id=<?php echo $_smarty_tpl->tpl_vars['USERID']->value;?>
 " ><?php echo $_smarty_tpl->tpl_vars['USERNAME']->value;?>
 </a>
+			                 <?php }?>
 						</li>
 						<li id="signup">
 							<a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>

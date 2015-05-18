@@ -1,17 +1,48 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.1.15, created on 2015-05-10 21:57:45
+         compiled from "C:\xampp\htdocs\xampp\frmk_loja\templates\common\header.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:11972554fb83943ea84-20138696%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'bafa216ab445511321252b1aef5e5d198fd2a390' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\xampp\\frmk_loja\\templates\\common\\header.tpl',
+      1 => 1431206044,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '11972554fb83943ea84-20138696',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'BASE_URL' => 0,
+    'USERNAME' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_554fb83947a365_66193911',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_554fb83947a365_66193911')) {function content_554fb83947a365_66193911($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta charset="utf-8">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>0100Tech - Loja Online</title>
-        <link href="{$BASE_URL}css/bootstrap.min.css" rel="stylesheet">
-        <link href="{$BASE_URL}css/styles.css" rel="stylesheet">
-        <link rel="stylesheet" href="{$BASE_URL}css/font-awesome.min.css">
-        <script src="{$BASE_URL}javascript/jquery.min.js"></script>
-        <Script src="{$BASE_URL}javascript/login.js"></Script>
-        <script src="{$BASE_URL}javascript/bootstrap.min.js"></script>
-        <script src="{$BASE_URL}javascript/error-messages.js"></script>
+		<title>0100Tech - Loja Online</title>
+		<link href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+css/bootstrap.min.css" rel="stylesheet">
+		<link href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+css/font-awesome.min.css">
+        <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+javascript/jquery.min.js"></script>
+        <Script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+javascript/login.js"></Script>
+        <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+javascript/bootstrap.min.js"></script>
         <script>
             var activeEl = -1;
             $(function() {
@@ -24,17 +55,19 @@
                 });
             });
         </script>
-    </head>
-    <body>
-
+	</head>
+	<body>
+		
         <header id="header">
+		
+			<?php if ($_smarty_tpl->tpl_vars['USERNAME']->value) {?>
+				<?php echo $_smarty_tpl->getSubTemplate ('common/header_logged_in.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-            {if $USERNAME}
-            {include file='common/header_logged_in.tpl'}
-            {else}
-            {include file='common/header_logged_out.tpl'}
-            {/if}
+			<?php } else { ?>
+				<?php echo $_smarty_tpl->getSubTemplate ('common/header_logged_out.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
+			<?php }?>
+            
             <div class="header-middle">
                 <div class="container">
                     <div class="row">
@@ -61,7 +94,7 @@
                     </div>
                 </div>
             </div>
-
+            
             <div class="header-bottom">
                 <div class="container">
                     <div class="row">
@@ -139,7 +172,7 @@
                                     <span class="fa fa-desktop"></span>
                                     <p>Computadores</p>
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-large row">
+                                    <ul class="dropdown-menu dropdown-menu-large row">
                                     <li class="col-sm-3">
                                         <ul>
                                             <li class="dropdown-header">Glyphicons</li>
@@ -448,27 +481,4 @@
                     </div>
                 </div>
             </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="error-message">
-
-                        {foreach $ERROR_MESSAGES as $error}
-                        <div class="oaerror danger page-alert">
-                            <button type="button" class="close"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                            <strong>ERRO</strong> - {$error}
-                        </div>
-                        {/foreach}
-                    </div>
-                    <div class="success-message">
-
-                        {foreach $SUCCESS_MESSAGES as $success}
-                        <div class="oaerror success page-alert">
-                            <button type="button" class="close"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                            <strong>SUCESSO</strong> - {$success}
-                        </div>
-                        {/foreach}
-                    </div>
-                </div>
-            </div>
-        </header>
+        </header><?php }} ?>

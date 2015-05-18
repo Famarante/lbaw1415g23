@@ -5,7 +5,12 @@
 				<nav id="login-nav">
 					<ul>
 						<li id="login">
-							<a id="login-trigger" href="{$BASE_URL}pages/users/cliente-edit.php?id={$USERID}" >{$USERNAME}</a>
+                            
+                            {if $ADMIN_USERNAME}
+				            <a id="login-trigger" href="{$BASE_URL}pages/admin/admin.php" >{$USERNAME}</a>
+			                 {else}
+				            <a id="login-trigger" href="{$BASE_URL}pages/users/cliente-edit.php?id={$USERID}" >{$USERNAME}</a>
+			                 {/if}
 						</li>
 						<li id="signup">
 							<a href="{$BASE_URL}actions/users/logout.php">Logout</a>

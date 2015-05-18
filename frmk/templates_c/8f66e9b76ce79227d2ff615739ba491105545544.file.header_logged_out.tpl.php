@@ -1,4 +1,29 @@
-<div class="header-top">
+<?php /* Smarty version Smarty-3.1.15, created on 2015-05-10 21:57:45
+         compiled from "C:\xampp\htdocs\xampp\frmk_loja\templates\common\header_logged_out.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:20909554fb8395fd779-55266961%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '8f66e9b76ce79227d2ff615739ba491105545544' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\xampp\\frmk_loja\\templates\\common\\header_logged_out.tpl',
+      1 => 1431192591,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '20909554fb8395fd779-55266961',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'BASE_URL' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_554fb8396071e0_66180813',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_554fb8396071e0_66180813')) {function content_554fb8396071e0_66180813($_smarty_tpl) {?><div class="header-top">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-2 col-md-offset-10 nopad">
@@ -8,7 +33,8 @@
 							<a id="login-trigger" data-toggle="modal" data-target="#loginModal">Login</a>
 						</li>
 						<li id="signup">
-							<a href="{$BASE_URL}pages/users/register.php">Registar</a>
+							<a href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+pages/users/register.php">Registar</a>
 						</li>
 					</ul>
 				</nav>
@@ -24,7 +50,8 @@
         <div class="fade active in" id="signin">
             <span class="pull-right" data-dismiss="modal">x</span>
             <br>
-            <form class="form-horizontal" role="form" id="login-form" action="{$BASE_URL}actions/users/login.php" method="post">
+            <form class="form-horizontal" role="form" id="login-form" action="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+actions/users/login.php" method="post">
             <fieldset>
             <!-- Sign In Form -->
             <!-- Text input-->
@@ -63,3 +90,4 @@
 
     </div>
 </div>
+<?php }} ?>

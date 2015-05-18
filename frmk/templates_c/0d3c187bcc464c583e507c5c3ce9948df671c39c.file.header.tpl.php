@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-04-27 03:16:24
+<?php /* Smarty version Smarty-3.1.15, created on 2015-05-11 03:10:32
          compiled from "E:\xampp\htdocs\xampp\frmk_loja\templates\common\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:10221553d2d4e4dc130-59104823%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0d3c187bcc464c583e507c5c3ce9948df671c39c' => 
     array (
       0 => 'E:\\xampp\\htdocs\\xampp\\frmk_loja\\templates\\common\\header.tpl',
-      1 => 1430097380,
+      1 => 1431306630,
       2 => 'file',
     ),
   ),
@@ -21,27 +21,34 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'BASE_URL' => 0,
     'USERNAME' => 0,
+    'ERROR_MESSAGES' => 0,
+    'error' => 0,
+    'SUCCESS_MESSAGES' => 0,
+    'success' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_553d2d4e5539f9_38481868')) {function content_553d2d4e5539f9_38481868($_smarty_tpl) {?><!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<meta charset="utf-8">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>0100Tech - Loja Online</title>
-		<link href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+        <title>0100Tech - Loja Online</title>
+        <link href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 css/bootstrap.min.css" rel="stylesheet">
-		<link href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+        <link href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 css/styles.css" rel="stylesheet">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+css/font-awesome.min.css">
         <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 javascript/jquery.min.js"></script>
         <Script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 javascript/login.js"></Script>
         <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 javascript/bootstrap.min.js"></script>
+        <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+javascript/error-messages.js"></script>
         <script>
             var activeEl = -1;
             $(function() {
@@ -54,19 +61,19 @@ javascript/bootstrap.min.js"></script>
                 });
             });
         </script>
-	</head>
-	<body>
-		
+    </head>
+    <body>
+
         <header id="header">
-		
-			<?php if ($_smarty_tpl->tpl_vars['USERNAME']->value) {?>
-				<?php echo $_smarty_tpl->getSubTemplate ('common/header_logged_in.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-			<?php } else { ?>
-				<?php echo $_smarty_tpl->getSubTemplate ('common/header_logged_out.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+            <?php if ($_smarty_tpl->tpl_vars['USERNAME']->value) {?>
+            <?php echo $_smarty_tpl->getSubTemplate ('common/header_logged_in.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
-			<?php }?>
-            
+            <?php } else { ?>
+            <?php echo $_smarty_tpl->getSubTemplate ('common/header_logged_out.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+            <?php }?>
+
             <div class="header-middle">
                 <div class="container">
                     <div class="row">
@@ -93,7 +100,7 @@ javascript/bootstrap.min.js"></script>
                     </div>
                 </div>
             </div>
-            
+
             <div class="header-bottom">
                 <div class="container">
                     <div class="row">
@@ -171,7 +178,7 @@ javascript/bootstrap.min.js"></script>
                                     <span class="fa fa-desktop"></span>
                                     <p>Computadores</p>
                                 </button>
-                                    <ul class="dropdown-menu dropdown-menu-large row">
+                                <ul class="dropdown-menu dropdown-menu-large row">
                                     <li class="col-sm-3">
                                         <ul>
                                             <li class="dropdown-header">Glyphicons</li>
@@ -477,6 +484,39 @@ javascript/bootstrap.min.js"></script>
                                 </ul>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="error-message">
+
+                        <?php  $_smarty_tpl->tpl_vars['error'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['error']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['ERROR_MESSAGES']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['error']->key => $_smarty_tpl->tpl_vars['error']->value) {
+$_smarty_tpl->tpl_vars['error']->_loop = true;
+?>
+                        <div class="oaerror danger page-alert">
+                            <button type="button" class="close"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                            <strong>ERRO</strong> - <?php echo $_smarty_tpl->tpl_vars['error']->value;?>
+
+                        </div>
+                        <?php } ?>
+                    </div>
+                    <div class="success-message">
+
+                        <?php  $_smarty_tpl->tpl_vars['success'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['success']->_loop = false;
+ $_from = $_smarty_tpl->tpl_vars['SUCCESS_MESSAGES']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['success']->key => $_smarty_tpl->tpl_vars['success']->value) {
+$_smarty_tpl->tpl_vars['success']->_loop = true;
+?>
+                        <div class="oaerror success page-alert">
+                            <button type="button" class="close"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                            <strong>SUCESSO</strong> - <?php echo $_smarty_tpl->tpl_vars['success']->value;?>
+
+                        </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>

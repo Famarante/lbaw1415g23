@@ -21,16 +21,13 @@
   $password = $_POST['password'];
   $email = $_POST['email'];
   $nif = $_POST['nif']; 
-  $address = $_POST['address'];
-  $city = $_POST['city'];
-  $zipcode = $_POST['zipcode'];
-  $country = $_POST['country'];
+
   $phone = $_POST['phone'];
   
 
 
   try{
-       createUser($username, $password, $name, $email, $address, $city, $zipcode, $country, $nif, $phone);
+       createUser($username, $password, $name, $email, $nif, $phone);
       
   }catch(PDOException $e){
     print($e->getMessage());

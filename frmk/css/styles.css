@@ -89,7 +89,7 @@ div.dropdown:hover > ul.dropdown-menu {
 }
 
 h4 {
-   font-style:italic; 
+    font-style:italic; 
 }
 
 .required-option {
@@ -369,14 +369,14 @@ h4 {
 Inspired by http://dribbble.com/shots/890759-Ui-Kit-Metro/attachments/97174
 */
 *, *:before, *:after {
-  /* Chrome 9-, Safari 5-, iOS 4.2-, Android 3-, Blackberry 7- */
-  -webkit-box-sizing: border-box; 
+    /* Chrome 9-, Safari 5-, iOS 4.2-, Android 3-, Blackberry 7- */
+    -webkit-box-sizing: border-box; 
 
-  /* Firefox (desktop or Android) 28- */
-  -moz-box-sizing: border-box;
+    /* Firefox (desktop or Android) 28- */
+    -moz-box-sizing: border-box;
 
-  /* Firefox 29+, IE 8+, Chrome 10+, Safari 5.1+, Opera 9.5+, iOS 5+, Opera Mini Anything, Blackberry 10+, Android 4+ */
-  box-sizing: border-box;
+    /* Firefox 29+, IE 8+, Chrome 10+, Safari 5.1+, Opera 9.5+, iOS 5+, Opera Mini Anything, Blackberry 10+, Android 4+ */
+    box-sizing: border-box;
 }
 
 .btn-nav {
@@ -395,8 +395,8 @@ Inspired by http://dribbble.com/shots/890759-Ui-Kit-Metro/attachments/97174
 .btn-nav.active {
     color: deepskyblue;
     padding: 2px;
-	border-top: 6px solid deepskyblue;
-	border-bottom: 6px solid deepskyblue;
+    border-top: 6px solid deepskyblue;
+    border-bottom: 6px solid deepskyblue;
     border-left: 0;
     border-right: 0;
     box-sizing:border-box;
@@ -410,21 +410,21 @@ Inspired by http://dribbble.com/shots/890759-Ui-Kit-Metro/attachments/97174
 }
 
 .btn-nav.active:before {
-	content: '';
-	position: absolute;
-	border-style: solid;
-	border-width: 6px 6px 0;
-	border-color: deepskyblue transparent;
-	display: block;
-	width: 0;
-	z-index: 1;
-	margin-left: -6px;
-	top: 0;
-	left: 50%;
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 6px 6px 0;
+    border-color: deepskyblue transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    margin-left: -6px;
+    top: 0;
+    left: 50%;
 }
 .btn-nav .fa {
     padding-top: 16px;
-	font-size: 40px;
+    font-size: 40px;
 }
 
 .btn-nav .glyphicon {
@@ -436,10 +436,10 @@ Inspired by http://dribbble.com/shots/890759-Ui-Kit-Metro/attachments/97174
     margin-bottom: 8px;
 }
 @-webkit-keyframes pulsate {
- 50% { color: #000; }
+    50% { color: #000; }
 }
 @keyframes pulsate {
- 50% { color: #000; }
+    50% { color: #000; }
 }
 @media (max-width: 480px) {
     .btn-group {
@@ -454,7 +454,7 @@ Inspired by http://dribbble.com/shots/890759-Ui-Kit-Metro/attachments/97174
         padding-top: 12px;
         font-size: 26px;
     }
-    
+
     .btn-nav .glyphicon {
         padding-top: 8px;
         font-size: 26px;
@@ -464,75 +464,75 @@ Inspired by http://dribbble.com/shots/890759-Ui-Kit-Metro/attachments/97174
 /* LARGE DROPDOWN */
 
 .dropdown-large {
-  position: static !important;
+    position: static !important;
 
 }
 .dropdown-menu-large {
-  
-  padding: 20px 0px;
+
+    padding: 20px 0px;
     width: 100%;
     right: 0px;
 }
 .dropdown-menu-large > li > ul {
-  padding: 0;
-  margin: 0;
+    padding: 0;
+    margin: 0;
 }
 .dropdown-menu-large > li > ul > li {
-  list-style: none;
+    list-style: none;
 }
 .dropdown-menu-large > li > ul > li > a {
-  display: block;
-  padding: 3px 20px;
-  clear: both;
-  font-weight: normal;
-  line-height: 1.428571429;
-  color: #333333;
-  white-space: normal;
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.428571429;
+    color: #333333;
+    white-space: normal;
 }
 .dropdown-menu-large > li ul > li > a:hover,
 .dropdown-menu-large > li ul > li > a:focus {
-  text-decoration: none;
-  color: #262626;
-  background-color: #f5f5f5;
+    text-decoration: none;
+    color: #262626;
+    background-color: #f5f5f5;
 }
 .dropdown-menu-large .disabled > a,
 .dropdown-menu-large .disabled > a:hover,
 .dropdown-menu-large .disabled > a:focus {
-  color: #999999;
+    color: #999999;
 }
 .dropdown-menu-large .disabled > a:hover,
 .dropdown-menu-large .disabled > a:focus {
-  text-decoration: none;
-  background-color: transparent;
-  background-image: none;
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  cursor: not-allowed;
+    text-decoration: none;
+    background-color: transparent;
+    background-image: none;
+    filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+    cursor: not-allowed;
 }
 .dropdown-menu-large .dropdown-header {
-  color: #428bca;
-  font-size: 18px;
+    color: #428bca;
+    font-size: 18px;
 }
 @media (max-width: 768px) {
-  .dropdown-menu-large {
-    margin-left: 0 ;
-    margin-right: 0 ;
-  }
-  .dropdown-menu-large > li {
-    margin-bottom: 30px;
-  }
-  .dropdown-menu-large > li:last-child {
-    margin-bottom: 0;
-  }
-  .dropdown-menu-large .dropdown-header {
-    padding: 3px 15px !important;
-  }
+    .dropdown-menu-large {
+        margin-left: 0 ;
+        margin-right: 0 ;
+    }
+    .dropdown-menu-large > li {
+        margin-bottom: 30px;
+    }
+    .dropdown-menu-large > li:last-child {
+        margin-bottom: 0;
+    }
+    .dropdown-menu-large .dropdown-header {
+        padding: 3px 15px !important;
+    }
 }
 
 
 /* ++++++++++++++++ PAGAMENTO +++++++++++++++ */
 
 .payment-receipt {
-    
+
     border: 2px solid deepskyblue;
     padding: 20px 20px;
     -webkit-border-radius: 20px;
@@ -550,134 +550,292 @@ Inspired by http://dribbble.com/shots/890759-Ui-Kit-Metro/attachments/97174
     width: 100%;	
 }
 .gap {
-	height: 30px;
-	width: 100%;
-	clear: both;
-	display: block;
+    height: 30px;
+    width: 100%;
+    clear: both;
+    display: block;
 }
 .footer {
-	background: #EDEFF1;
-	height: auto;
-	padding-bottom: 30px;
-	position: relative;
-	width: 100%;
-	border-bottom: 1px solid #CCCCCC;
-	border-top: 1px solid #DDDDDD;
+    background: #EDEFF1;
+    height: auto;
+    padding-bottom: 30px;
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #CCCCCC;
+    border-top: 1px solid #DDDDDD;
 }
 .footer p {
-	margin: 0;
+    margin: 0;
 }
 .footer img {
-	max-width: 100%;
+    max-width: 100%;
 }
 .footer h3 {
-	border-bottom: 1px solid #BAC1C8;
-	color: #54697E;
-	font-size: 18px;
-	font-weight: 600;
-	line-height: 27px;
-	padding: 40px 0 10px;
-	text-transform: uppercase;
+    border-bottom: 1px solid #BAC1C8;
+    color: #54697E;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    padding: 40px 0 10px;
+    text-transform: uppercase;
 }
 .footer ul {
-	font-size: 13px;
-	list-style-type: none;
-	margin-left: 0;
-	padding-left: 0;
-	margin-top: 15px;
-	color: #7F8C8D;
+    font-size: 13px;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 15px;
+    color: #7F8C8D;
 }
 .footer ul li a {
-	padding: 0 0 5px 0;
-	display: block;
+    padding: 0 0 5px 0;
+    display: block;
 }
 .footer a {
-	color: #78828D
+    color: #78828D
 }
 .supportLi h4 {
-	font-size: 20px;
-	font-weight: lighter;
-	line-height: normal;
-	margin-bottom: 0 !important;
-	padding-bottom: 0;
+    font-size: 20px;
+    font-weight: lighter;
+    line-height: normal;
+    margin-bottom: 0 !important;
+    padding-bottom: 0;
 }
 .newsletter-box input#appendedInputButton {
-	background: #FFFFFF;
-	display: inline-block;
-	float: left;
-	height: 30px;
-	clear: both;
-	width: 100%;
+    background: #FFFFFF;
+    display: inline-block;
+    float: left;
+    height: 30px;
+    clear: both;
+    width: 100%;
 }
 .newsletter-box .btn {
-	border: medium none;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	-o-border-radius: 3px;
-	-ms-border-radius: 3px;
-	border-radius: 3px;
-	display: inline-block;
-	height: 40px;
-	padding: 0;
-	width: 100%;
-	color: #fff;
+    border: medium none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    height: 40px;
+    padding: 0;
+    width: 100%;
+    color: #fff;
 }
 .newsletter-box {
-	overflow: hidden;
+    overflow: hidden;
 }
 .bg-gray {
-	background-image: -moz-linear-gradient(center bottom, #BBBBBB 0%, #F0F0F0 100%);
-	box-shadow: 0 1px 0 #B4B3B3;
+    background-image: -moz-linear-gradient(center bottom, #BBBBBB 0%, #F0F0F0 100%);
+    box-shadow: 0 1px 0 #B4B3B3;
 }
 .social li {
-	background: none repeat scroll 0 0 #B5B5B5;
-	border: 2px solid #B5B5B5;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	-o-border-radius: 50%;
-	-ms-border-radius: 50%;
-	border-radius: 50%;
-	float: left;
-	height: 36px;
-	line-height: 36px;
-	margin: 0 8px 0 0;
-	padding: 0;
-	text-align: center;
-	width: 36px;
-	transition: all 0.5s ease 0s;
-	-moz-transition: all 0.5s ease 0s;
-	-webkit-transition: all 0.5s ease 0s;
-	-ms-transition: all 0.5s ease 0s;
-	-o-transition: all 0.5s ease 0s;
+    background: none repeat scroll 0 0 #B5B5B5;
+    border: 2px solid #B5B5B5;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    float: left;
+    height: 36px;
+    line-height: 36px;
+    margin: 0 8px 0 0;
+    padding: 0;
+    text-align: center;
+    width: 36px;
+    transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
 }
 .social li:hover {
-	transform: scale(1.15) rotate(360deg);
-	-webkit-transform: scale(1.1) rotate(360deg);
-	-moz-transform: scale(1.1) rotate(360deg);
-	-ms-transform: scale(1.1) rotate(360deg);
-	-o-transform: scale(1.1) rotate(360deg);
+    transform: scale(1.15) rotate(360deg);
+    -webkit-transform: scale(1.1) rotate(360deg);
+    -moz-transform: scale(1.1) rotate(360deg);
+    -ms-transform: scale(1.1) rotate(360deg);
+    -o-transform: scale(1.1) rotate(360deg);
 }
 .social li a {
-	color: #EDEFF1;
+    color: #EDEFF1;
 }
 .social li:hover {
-	border: 2px solid #2c3e50;
-	background: #2c3e50;
+    border: 2px solid #2c3e50;
+    background: #2c3e50;
 }
 .social li a i {
-	font-size: 16px;
-	margin: 0 0 0 5px;
-	color: #EDEFF1 !important;
+    font-size: 16px;
+    margin: 0 0 0 5px;
+    color: #EDEFF1 !important;
 }
 .footer-bottom {
-	background: #E3E3E3;
-	border-top: 1px solid #DDDDDD;
-	padding-top: 10px;
-	padding-bottom: 10px;
+    background: #E3E3E3;
+    border-top: 1px solid #DDDDDD;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .footer-bottom p.pull-left {
-	padding-top: 6px;
+    padding-top: 6px;
 }
 .payments {
-	font-size: 1.5em;	
+    font-size: 1.5em;	
 }
+
+
+/* ERROR MESSAGES */
+
+.error-message, .success-message {
+    margin: 5px 5px; /* Making sure to keep some distance from all side */
+}
+
+.oaerror {
+    width: 90%; /* Configure it fit in your design  */
+    margin: 0 auto; /* Centering Stuff */
+    background-color: #FFFFFF; /* Default background */
+    padding: 20px;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+
+.danger {
+    border-left-color: #d9534f; /* Left side border color */
+    background-color: rgba(217, 83, 79, 0.1); /* Same color as the left border with reduced alpha to 0.1 */
+}
+
+.danger strong {
+    color:  #d9534f;
+}
+
+.warning {
+    border-left-color: #f0ad4e;
+    background-color: rgba(240, 173, 78, 0.1);
+}
+
+.warning strong {
+    color: #f0ad4e;
+}
+
+.info {
+    border-left-color: #5bc0de;
+    background-color: rgba(91, 192, 222, 0.1);
+}
+
+.info strong {
+    color: #5bc0de;
+}
+
+.success {
+    border-left-color: #2b542c;
+    background-color: rgba(43, 84, 44, 0.1);
+}
+
+.success strong {
+    color: #2b542c;
+}
+
+.page-alerts {
+    margin-bottom: 20px;
+}
+
+.page-alerts .page-alert {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+/* ++++++ TESTE APRESENTAR MORADA +++++++ */
+.list-group {
+	overflow: hidden;
+	border-left: 1px solid rgb(221, 221, 221);
+	border-right: 1px solid rgb(221, 221, 221);
+}
+.list-group-item:first-child, .list-group-item:last-child {
+	border-top-right-radius: 0px;
+	border-top-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	overflow: hidden;
+}
+.list-group-item {
+	border-left: 0px solid rgb(221, 221, 221);
+	border-right: 0px solid rgb(221, 221, 221);
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+.list-group-item > .show-menu {
+	position: absolute;
+	height: 100%; width:24px;
+	top: 0px; right: 0px;
+	background-color: rgba(51, 51, 51, 0.2);
+	cursor: pointer;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+.list-group-item > .show-menu > span {
+	position: absolute;
+	top: 50%;
+	margin-top: -7px;
+	padding: 0px 5px;
+}
+.list-group-submenu {
+	position: absolute;
+	top: 0px;
+	right: -88px;
+	white-space: nowrap;
+	list-style: none;
+	padding-left: 0px;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+.list-group-submenu .list-group-submenu-item {
+	float: right;
+	white-space: nowrap;
+	display: block;
+	padding: 10px 15px;
+	margin-bottom: -1px;
+	background-color: rgb(51, 51, 51);
+	color: rgb(235, 235, 235);
+}
+.list-group-item.open {
+	margin-left: -88px;
+}
+.list-group-item.open > .show-menu {
+	right: 88px;
+}
+.list-group-item.open .list-group-submenu{
+	right: 0px;
+}
+.list-group-submenu .list-group-submenu-item.primary {
+	color: rgb(255, 255, 255);
+	background-color: rgb(50, 118, 177);
+}
+.list-group-submenu .list-group-submenu-item.success {
+	color: rgb(255, 255, 255);
+	background-color: rgb(92, 184, 92);
+}
+.list-group-submenu .list-group-submenu-item.info {
+	color: rgb(255, 255, 255);
+	background-color: rgb(57, 179, 215);
+}
+.list-group-submenu .list-group-submenu-item.warning {
+	color: rgb(255, 255, 255);
+	background-color: rgb(240, 173, 78);
+}
+.list-group-submenu .list-group-submenu-item.danger {
+	color: rgb(255, 255, 255);
+	background-color: rgb(217, 83, 79);
+}
+
