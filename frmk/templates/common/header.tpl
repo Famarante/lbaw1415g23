@@ -7,7 +7,8 @@
         <title>0100Tech - Loja Online</title>
         <link href="{$BASE_URL}css/bootstrap.min.css" rel="stylesheet">
         <link href="{$BASE_URL}css/styles.css" rel="stylesheet">
-        <link rel="stylesheet" href="{$BASE_URL}css/font-awesome.min.css">
+        <link href="{$BASE_URL}css/error-messages.css" rel="stylesheet">
+        <link href="{$BASE_URL}css/font-awesome.min.css" rel="stylesheet">
         <script src="{$BASE_URL}javascript/jquery.min.js"></script>
         <Script src="{$BASE_URL}javascript/login.js"></Script>
         <script src="{$BASE_URL}javascript/bootstrap.min.js"></script>

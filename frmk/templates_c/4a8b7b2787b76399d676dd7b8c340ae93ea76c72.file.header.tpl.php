@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-11 01:52:50
+<?php /* Smarty version Smarty-3.1.15, created on 2015-05-21 17:41:30
          compiled from "E:\xampp\htdocs\xampp\frmk_loja\templates\admin\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:30773554f479e3ecc28-85762446%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4a8b7b2787b76399d676dd7b8c340ae93ea76c72' => 
     array (
       0 => 'E:\\xampp\\htdocs\\xampp\\frmk_loja\\templates\\admin\\header.tpl',
-      1 => 1431301799,
+      1 => 1432222888,
       2 => 'file',
     ),
   ),
@@ -46,15 +46,19 @@ css/bootstrap.min.css" rel="stylesheet">
 css/admin.css" rel="stylesheet">
 
         <!-- Morris Charts CSS 
-<link href="css/plugins/morris.css" rel="stylesheet"> -->
+        <link href="css/plugins/morris.css" rel="stylesheet"> -->
 
         <!-- Custom Fonts -->
         <link href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+css/error-messages.css" rel="stylesheet">
         <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 javascript/jquery.min.js"></script>
         <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 javascript/bootstrap.min.js"></script>
+        <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+javascript/error-messages.js"></script>
 
 
     </head>
@@ -64,7 +68,7 @@ javascript/bootstrap.min.js"></script>
         <div id="wrapper">
 
             <!-- Navigation -->
-            <nav class="navbar navbar-fixed-top" role="navigation">
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -73,7 +77,8 @@ javascript/bootstrap.min.js"></script>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <!--<a class="navbar-brand" href="index.html">SB Admin</a> -->
+                    <a class="navbar-brand" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+index.php">0100Tech</a>
                 </div>
                 <!-- Top Menu Items -->
                 <ul class="nav navbar-right top-nav">
@@ -181,14 +186,22 @@ actions/users/logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
-                        <li>
+                        <li class="active">
                             <a href="admin.php"><i class="fa fa-fw fa-dashboard"></i> Painel de Administração</a>
                         </li>
                         <li>
                             <a href="clientes.php"><i class="fa fa-fw fa-users"></i> Clientes</a>
                         </li>
                         <li>
-                            <a href="produtos.php"><i class="fa fa-fw fa-desktop"></i> Produtos</a>
+                            <a href="javascript:;" data-toggle="collapse" data-target="#dropdown-produtos"><i class="fa fa-fw fa-desktop"></i> Produtos</a>
+                            <ul id="dropdown-produtos" class="collapse">
+                                <li>
+                                    <a href="adicionar-produto.php">Adicionar produto</a>
+                                </li>
+                                <li>
+                                    <a href="produtos.php">Ver produtos</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a href="encomendas.php"><i class="fa fa-fw fa-shopping-cart"></i> Encomendas</a>

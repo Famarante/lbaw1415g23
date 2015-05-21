@@ -1,6 +1,109 @@
 <?php
 
 /**
+ * Criar categoria
+ *
+ * @param $nome_categoria
+ *
+ */
+function createCategory($nome_categoria) {
+    global $conn;
+
+    $stmt = $conn->prepare("INSERT INTO categoria (nome) VALUES (?)");
+    $stmt->execute(array($nome_categoria));
+    
+    $resultCategoria = $conn->prepare("SELECT idcategoria FROM categoria WHERE nome=?");
+    $resultCategoria->execute(array($nome_categoria));
+    $resultCategoria = $resultCategoria->fetch();
+    
+    return $resultCategoria['idcategoria'];
+
+}
+
+/**
+ * Criar marca
+ *
+ * @param $nome_marca
+ *
+ */
+function createBrand($nome_marca) {
+    global $conn;
+
+    $stmt = $conn->prepare("INSERT INTO marca (nome) VALUES (?)");
+    $stmt->execute(array($nome_marca));
+    
+    $resultMarca = $conn->prepare("SELECT idmarca FROM marca WHERE nome=?");
+    $resultMarca->execute(array($nome_marca));
+    $resultMarca = $resultMarca->fetch();
+    
+    return $resultMarca['idmarca'];
+
+}
+
+/**
+ * Criar modelo
+ *
+ * @param $nome_modelo
+ * @param $id_marca
+ *
+ */
+function createModel($nome_modelo, $id_marca) {
+    global $conn;
+
+    $stmt = $conn->prepare("INSERT INTO modelo (nome, idmarca) VALUES (?, ?)");
+    $stmt->execute(array($nome_modelo, $id_marca));
+    
+    $resultModelo = $conn->prepare("SELECT idmodelo FROM modelo WHERE nome=? AND idmarca=?");
+    $resultModelo->execute(array($nome_modelo, $id_marca));
+    $resultModelo = $resultModelo->fetch();
+    
+    return $resultModelo['idmodelo'];
+
+}
+
+/**
+ * Criar versão
+ *
+ * @param $nome_versao
+ * @param $id_modelo
+ * @param $id_marca
+ *
+ */
+function createVersion($nome_versao, $id_modelo) {
+    global $conn;
+
+    $stmt = $conn->prepare("INSERT INTO versao (nome, idmodelo) VALUES (?, ?)");
+    $stmt->execute(array($nome_versao, $id_modelo));
+    
+    $resultVersao = $conn->prepare("SELECT idversao FROM versao WHERE nome=? AND idmodelo=?");
+    $resultVersao->execute(array($nome_versao, $id_modelo));
+    $resultVersao = $resultVersao->fetch();
+    
+    return $resultVersao['idversao'];
+
+}
+
+/**
+ * Criar cor
+ *
+ * @param $nome_cor
+ *
+ */
+function createColor($nome_cor) {
+    global $conn;
+
+    $stmt = $conn->prepare("INSERT INTO cor (nome) VALUES (?)");
+    $stmt->execute(array($nome_cor));
+    
+    $resultCor = $conn->prepare("SELECT idcor FROM cor WHERE nome=?");
+    $resultCor->execute(array($nome_cor));
+    $resultCor = $resultCor->fetch();
+    
+    return $resultCor['idcor'];
+
+}
+
+/**
  * Criar produto com os parametros obrigatórios
  *
  * @param $descricao
@@ -13,30 +116,16 @@
  * @param $nome_categoria
  *
  */
-function createProduct($descricao, $disponibilidade, $nome, $preco, $stock, $nome_cor, $nome_versao, $nome_categoria) {
+function createProduct($descricao, $disponibilidade, $nome, $preco, $stock, $id_cor, $id_versao, $id_categoria, $imagem = NULL) {
     global $conn;
 
-    /*
-     * verificar cor / versao / categoria
-     */
-
-    $resultCor = $conn->query("SELECT idcor FROM cor WHERE nome='$nome_cor'");
-    $resultCor = $resultCor->fetch();
-
-    $resultCategoria = $conn->query("SELECT idcategoria FROM categoria WHERE nome='$nome_categoria'");
-    $resultCategoria = $resultCategoria->fetch();
-
-    $resultVersao = $conn->query("SELECT idversao FROM versao WHERE nome='$nome_versao'");
-    $resultVersao = $resultVersao->fetch();
-
-    if(!isset($resultCor) || !isset($resultCategoria) || !isset($resultVersao))
-        return; //error message
-    else
-    if(!isset($descricao) || !isset($disponibilidade) || !isset($nome) || !isset($preco) || !isset($stock))
-        return; //error message
-    else{
+    if($imagem == NULL){
         $stmt = $conn->prepare("INSERT INTO produto (descricao, disponibilidade, nome, preco, stock, idcor, idversao, idcategoria) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->execute(array($descricao, $disponibilidade, $nome, $preco, $stock, $resultCor['idcor'], $resultCategoria['idcategoria'], $resultVersao['idversao']));
+        $stmt->execute(array($descricao, $disponibilidade, $nome, $preco, $stock, $id_cor, $id_versao, $id_categoria));
+    }
+    else{
+        $stmt = $conn->prepare("INSERT INTO produto (descricao, disponibilidade, nome, preco, stock, idcor, idversao, idcategoria, imagem) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $stmt->execute(array($descricao, $disponibilidade, $nome, $preco, $stock, $id_cor, $id_versao, $id_categoria, $imagem));
     }
 }
 

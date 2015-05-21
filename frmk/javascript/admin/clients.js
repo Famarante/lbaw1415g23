@@ -94,6 +94,7 @@ $(function () {
             url: "../../api/get-clients.php",             
             dataType: "json",              
             success: function(response){  
+                console.log(response);
                 for ( var i = 0, l = response.length; i < l; i++ ) {
                     if(response[i].suspenso)
                         $('#banned-clients').append('<li class="list-group-item" value="' + response[i].idutilizador + '">' + 'ID: ' + response[i].idutilizador + ' - ' + response[i].username + '</li>');

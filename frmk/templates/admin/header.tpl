@@ -18,12 +18,14 @@
         <link href="{$BASE_URL}css/admin.css" rel="stylesheet">
 
         <!-- Morris Charts CSS 
-<link href="css/plugins/morris.css" rel="stylesheet"> -->
+        <link href="css/plugins/morris.css" rel="stylesheet"> -->
 
         <!-- Custom Fonts -->
         <link href="{$BASE_URL}css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="{$BASE_URL}css/error-messages.css" rel="stylesheet">
         <script src="{$BASE_URL}javascript/jquery.min.js"></script>
         <script src="{$BASE_URL}javascript/bootstrap.min.js"></script>
+        <script src="{$BASE_URL}javascript/error-messages.js"></script>
 
 
     </head>
@@ -33,7 +35,7 @@
         <div id="wrapper">
 
             <!-- Navigation -->
-            <nav class="navbar navbar-fixed-top" role="navigation">
+            <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -42,7 +44,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <!--<a class="navbar-brand" href="index.html">SB Admin</a> -->
+                    <a class="navbar-brand" href="{$BASE_URL}index.php">0100Tech</a>
                 </div>
                 <!-- Top Menu Items -->
                 <ul class="nav navbar-right top-nav">
@@ -148,14 +150,22 @@
                 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
-                        <li>
+                        <li class="active">
                             <a href="admin.php"><i class="fa fa-fw fa-dashboard"></i> Painel de Administração</a>
                         </li>
                         <li>
                             <a href="clientes.php"><i class="fa fa-fw fa-users"></i> Clientes</a>
                         </li>
                         <li>
-                            <a href="produtos.php"><i class="fa fa-fw fa-desktop"></i> Produtos</a>
+                            <a href="javascript:;" data-toggle="collapse" data-target="#dropdown-produtos"><i class="fa fa-fw fa-desktop"></i> Produtos</a>
+                            <ul id="dropdown-produtos" class="collapse">
+                                <li>
+                                    <a href="adicionar-produto.php">Adicionar produto</a>
+                                </li>
+                                <li>
+                                    <a href="produtos.php">Ver produtos</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a href="encomendas.php"><i class="fa fa-fw fa-shopping-cart"></i> Encomendas</a>

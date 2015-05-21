@@ -1,4 +1,26 @@
-{include file='admin/header.tpl'}
+<?php /* Smarty version Smarty-3.1.15, created on 2015-05-20 16:56:15
+         compiled from "E:\xampp\htdocs\xampp\frmk_loja\templates\admin\produtos.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:25402555ca08f3731e5-68682639%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'a34c4ba3eb3df611cc31f52c2220c81da387267b' => 
+    array (
+      0 => 'E:\\xampp\\htdocs\\xampp\\frmk_loja\\templates\\admin\\produtos.tpl',
+      1 => 1432133000,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '25402555ca08f3731e5-68682639',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_555ca08f3eb8e4_03472117',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_555ca08f3eb8e4_03472117')) {function content_555ca08f3eb8e4_03472117($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('admin/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 
 <div id="page-wrapper">
 
@@ -85,4 +107,5 @@
 
 </div>
 
-{include file='admin/footer.tpl'}
+<?php echo $_smarty_tpl->getSubTemplate ('admin/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php }} ?>

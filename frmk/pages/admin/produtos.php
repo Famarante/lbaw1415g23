@@ -5,6 +5,6 @@
         $smarty->display('codes/401.tpl');
     }
     else{
-        $smarty->display('admin/clientes.tpl');
+        $smarty->display('admin/produtos.tpl');
     }
 ?>

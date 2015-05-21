@@ -48,7 +48,7 @@ CREATE TABLE Morada(
 
 CREATE TABLE Utilizador(
 	idUtilizador SERIAL PRIMARY KEY,
-	username VARCHAR NOT NULL,
+	username VARCHAR NOT NULL UNIQUE,
 	password VARCHAR NOT NULL
 );
 
@@ -58,10 +58,11 @@ CREATE TABLE Administrador(
 );
 
 CREATE TABLE Cliente(
-	email VARCHAR NOT NULL,
-	nif INTEGER NOT NULL,
+	email VARCHAR NOT NULL UNIQUE,
+	nif INTEGER NOT NULL UNIQUE,
 	nome VARCHAR NOT NULL,
 	telemovel INTEGER,
+	suspenso BOOLEAN DEFAULT FALSE,
 	PRIMARY KEY(idCliente),
 	idCliente SERIAL REFERENCES Utilizador(idUtilizador)
 );
@@ -74,29 +75,32 @@ CREATE TABLE MoradasCliente(
 
 CREATE TABLE Marca(
 	idMarca SERIAL PRIMARY KEY,
-	nome VARCHAR NOT NULL
+	nome VARCHAR NOT NULL UNIQUE
 );
 
 CREATE TABLE Modelo(
 	idModelo SERIAL PRIMARY KEY,
 	nome VARCHAR NOT NULL,
-	idMarca SERIAL REFERENCES Marca(idMarca)
+	idMarca SERIAL REFERENCES Marca(idMarca),
+	UNIQUE (nome, idMarca)
 );
 
 CREATE TABLE Versao(
 	idVersao SERIAL PRIMARY KEY,
 	nome VARCHAR NOT NULL,
-	idModelo SERIAL REFERENCES Modelo(idModelo)
+	idModelo SERIAL REFERENCES Modelo(idModelo),
+	UNIQUE (nome, idModelo)
 );
 
 CREATE TABLE Cor(
 	idCor SERIAL PRIMARY KEY,
-	nome VARCHAR NOT NULL
+	nome VARCHAR NOT NULL UNIQUE
 );
 
 CREATE TABLE Categoria(
 	idCategoria SERIAL PRIMARY KEY,
-	nome VARCHAR NOT NULL
+	nome VARCHAR NOT NULL UNIQUE,
+	idSubcategoria SERIAL REFERENCES Categoria(idCategoria)
 );
 
 CREATE TABLE Produto(
@@ -106,6 +110,7 @@ CREATE TABLE Produto(
 	nome VARCHAR NOT NULL,
 	preco NUMERIC NOT NULL,
 	stock INTEGER NOT NULL,
+	imagem VARCHAR,
 	idCor SERIAL REFERENCES Cor(idCor),
 	idVersao SERIAL REFERENCES Versao(idVersao),
 	idCategoria SERIAL REFERENCES Categoria(idCategoria)

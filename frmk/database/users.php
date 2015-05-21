@@ -7,6 +7,8 @@
     function createUser($username, $password, $fullname, $email, $nif, $phone) {
         global $conn;
         
+        $conn->beginTransaction();
+        
         $stmt = $conn->prepare("INSERT INTO utilizador (username, password) VALUES (?, ?)");
         $stmt->execute(array($username, sha1($password)));
         
@@ -35,6 +37,8 @@
                 $stmt->execute(array($fullname, $email, $nif, $phone, $resultUser['idutilizador']));
             }
         }
+        
+        $conn->commit();
     
     }
 

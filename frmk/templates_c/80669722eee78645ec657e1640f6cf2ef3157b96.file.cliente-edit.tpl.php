@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-11 19:59:59
+<?php /* Smarty version Smarty-3.1.15, created on 2015-05-20 13:29:41
          compiled from "E:\xampp\htdocs\xampp\frmk_loja\templates\users\cliente-edit.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:20847553d75bbe56d59-32622905%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '80669722eee78645ec657e1640f6cf2ef3157b96' => 
     array (
       0 => 'E:\\xampp\\htdocs\\xampp\\frmk_loja\\templates\\users\\cliente-edit.tpl',
-      1 => 1431367194,
+      1 => 1432121296,
       2 => 'file',
     ),
   ),
@@ -29,6 +29,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 
 <script>
     $(function() {
+        
         $( "#add-address" ).on('click', function() {
             $( "#address-form" ).removeAttr('hidden');
             $( "#add-address" ).hide();
@@ -107,14 +108,14 @@ actions/clients/cliente-edit.php" method="post">
                 <div class="form-group">
                     <label class="col-md-3 control-label">Password:</label>
                     <div class="col-md-8">
-                        <input class="form-control" type="password" name="password" value="<?php echo $_smarty_tpl->tpl_vars['USERDATA']->value['password'];?>
+                        <input class="form-control" type="password" id="password" name="password" value="<?php echo $_smarty_tpl->tpl_vars['USERDATA']->value['password'];?>
 ">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Repetir password:</label>
                     <div class="col-md-8">
-                        <input class="form-control" type="password" name="rpassword" value="<?php echo $_smarty_tpl->tpl_vars['USERDATA']->value['password'];?>
+                        <input class="form-control" type="password" id="rpassword" name="rpassword" value="<?php echo $_smarty_tpl->tpl_vars['USERDATA']->value['password'];?>
 ">
                     </div>
                 </div>
@@ -150,7 +151,7 @@ actions/clients/cliente-edit.php" method="post">
                 <div class="form-group">
                     <label class="col-md-3 control-label"></label>
                     <div class="col-md-8">
-                        <button class="btn btn-primary" type="submit">Guardar</button>
+                        <button class="btn btn-primary" id="submit-client-changes" type="submit">Guardar</button>
                         <span></span>
                         <input type="reset" class="btn btn-default" value="Cancelar">
                     </div>

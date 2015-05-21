@@ -2,6 +2,7 @@
 
 <script>
     $(function() {
+        
         $( "#add-address" ).on('click', function() {
             $( "#address-form" ).removeAttr('hidden');
             $( "#add-address" ).hide();
@@ -78,13 +79,13 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label">Password:</label>
                     <div class="col-md-8">
-                        <input class="form-control" type="password" name="password" value="{$USERDATA.password}">
+                        <input class="form-control" type="password" id="password" name="password" value="{$USERDATA.password}">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Repetir password:</label>
                     <div class="col-md-8">
-                        <input class="form-control" type="password" name="rpassword" value="{$USERDATA.password}">
+                        <input class="form-control" type="password" id="rpassword" name="rpassword" value="{$USERDATA.password}">
                     </div>
                 </div>
                 <div class="form-group">
@@ -115,7 +116,7 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label"></label>
                     <div class="col-md-8">
-                        <button class="btn btn-primary" type="submit">Guardar</button>
+                        <button class="btn btn-primary" id="submit-client-changes" type="submit">Guardar</button>
                         <span></span>
                         <input type="reset" class="btn btn-default" value="Cancelar">
                     </div>

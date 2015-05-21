@@ -4,7 +4,7 @@
 
     global $conn;
     
-    $result = $conn->query("SELECT idcliente,nome FROM cliente");
+    $result = $conn->query("SELECT idcor, nome FROM cor");
     $result = $result->fetchAll();
 
     echo json_encode($result);

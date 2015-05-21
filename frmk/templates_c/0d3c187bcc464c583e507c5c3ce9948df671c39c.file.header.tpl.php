@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-11 03:10:32
+<?php /* Smarty version Smarty-3.1.15, created on 2015-05-21 13:46:06
          compiled from "E:\xampp\htdocs\xampp\frmk_loja\templates\common\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:10221553d2d4e4dc130-59104823%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0d3c187bcc464c583e507c5c3ce9948df671c39c' => 
     array (
       0 => 'E:\\xampp\\htdocs\\xampp\\frmk_loja\\templates\\common\\header.tpl',
-      1 => 1431306630,
+      1 => 1432208743,
       2 => 'file',
     ),
   ),
@@ -39,8 +39,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 css/bootstrap.min.css" rel="stylesheet">
         <link href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 css/styles.css" rel="stylesheet">
-        <link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
-css/font-awesome.min.css">
+        <link href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+css/error-messages.css" rel="stylesheet">
+        <link href="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+css/font-awesome.min.css" rel="stylesheet">
         <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 javascript/jquery.min.js"></script>
         <Script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
