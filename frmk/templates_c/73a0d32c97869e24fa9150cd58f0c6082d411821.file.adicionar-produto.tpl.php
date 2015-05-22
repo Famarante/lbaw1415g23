@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-21 17:47:11
+<?php /* Smarty version Smarty-3.1.15, created on 2015-05-21 18:38:54
          compiled from "E:\xampp\htdocs\xampp\frmk_loja\templates\admin\adicionar-produto.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12505555ca165935d22-02934708%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '73a0d32c97869e24fa9150cd58f0c6082d411821' => 
     array (
       0 => 'E:\\xampp\\htdocs\\xampp\\frmk_loja\\templates\\admin\\adicionar-produto.tpl',
-      1 => 1432223202,
+      1 => 1432226267,
       2 => 'file',
     ),
   ),
@@ -165,7 +165,7 @@ actions/products/add-product.php" method="post" id="produto-form" enctype="multi
                         <div class="form-group">
                             <label class="col-md-2 control-label" for="textinput">Descrição</label>
                             <div class="col-md-10">
-                                <textarea class="form-control" rows="5" id="descrição" name="descrição"></textarea>
+                                <textarea class="form-control" rows="5" id="descrição" name="descrição" required></textarea>
                             </div>
                         </div>
 

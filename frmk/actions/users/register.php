@@ -29,7 +29,6 @@
     $password = $_POST['password'];
     $email = $_POST['email'];
     $nif = $_POST['nif']; 
-
     $phone = $_POST['phone'];
 
 

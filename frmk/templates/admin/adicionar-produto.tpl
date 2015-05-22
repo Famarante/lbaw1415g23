@@ -119,7 +119,7 @@
                         <div class="form-group">
                             <label class="col-md-2 control-label" for="textinput">Descrição</label>
                             <div class="col-md-10">
-                                <textarea class="form-control" rows="5" id="descrição" name="descrição"></textarea>
+                                <textarea class="form-control" rows="5" id="descrição" name="descrição" required></textarea>
                             </div>
                         </div>
 
