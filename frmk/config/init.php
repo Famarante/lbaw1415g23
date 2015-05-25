@@ -6,7 +6,8 @@
   $BASE_DIR = 'E:/xampp/htdocs/xampp/frmk_loja/'; //FIXME
   $BASE_URL = '/xampp/frmk_loja/'; //FIXME
 
-  $conn = new PDO('pgsql:host=vdbm.fe.up.pt;dbname=lbaw1423', 'lbaw1423', 'rP298ck6'); //FIXME
+  $conn = new PDO('pgsql:host=vdbm.fe.up.pt;dbname=lbaw1423', 'lbaw1423', 'rP298ck6'); //LIGADO À VPN
+  //$conn = new PDO('pgsql:host=localhost;dbname=lojaDB', 'postgres', 'root'); //LOCAL
   $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

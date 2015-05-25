@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-21 17:41:30
+<?php /* Smarty version Smarty-3.1.15, created on 2015-05-25 13:28:09
          compiled from "E:\xampp\htdocs\xampp\frmk_loja\templates\admin\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:30773554f479e3ecc28-85762446%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4a8b7b2787b76399d676dd7b8c340ae93ea76c72' => 
     array (
       0 => 'E:\\xampp\\htdocs\\xampp\\frmk_loja\\templates\\admin\\header.tpl',
-      1 => 1432222888,
+      1 => 1432553288,
       2 => 'file',
     ),
   ),
@@ -199,7 +199,7 @@ actions/users/logout.php"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
                                     <a href="adicionar-produto.php">Adicionar produto</a>
                                 </li>
                                 <li>
-                                    <a href="produtos.php">Ver produtos</a>
+                                    <a href="produtos.php?pagina=1">Ver produtos</a>
                                 </li>
                             </ul>
                         </li>

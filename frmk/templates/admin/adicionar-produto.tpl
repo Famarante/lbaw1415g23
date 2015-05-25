@@ -77,7 +77,7 @@
                         <div class="form-group" id="modelo-div">
                             <label class="col-md-2 control-label" for="textinput">Versão</label>
                             <div class="col-md-10">
-                                <input type="text" placeholder="Versão" class="form-control" name="versão">
+                                <input type="text" placeholder="Versão" class="form-control" name="versão" required>
                             </div>
                         </div>
 

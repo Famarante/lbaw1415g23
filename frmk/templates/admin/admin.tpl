@@ -73,7 +73,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="produtos.php">
+                    <a href="produtos.php?pagina=1">
                         <div class="panel-footer">
                             <span class="pull-left">Ver em detalhe</span>
                             <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

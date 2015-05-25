@@ -6,8 +6,9 @@ include_once($BASE_DIR .'database/products.php');
 //Necessário fazer - Verificar campos vazios
 
 global $conn;
-$conn->beginTransaction();
 
+$idproduto = intval($_POST['idproduto']);
+$produtoData = getProductByID($idproduto);
 $idcategoria = intval($_POST['categoria']);
 if($idcategoria == -1){
     $categoria = $_POST['nova-categoria'];
@@ -21,7 +22,11 @@ if($idcategoria == -1){
         }         
     }
 }
-$idmarca = intval($_POST['marca']);
+if($idcategoria != $produtoData['idcategoria']){
+    changeCategoria($idproduto, $idcategoria);
+}
+
+/*$idmarca = intval($_POST['marca']);
 if($idmarca == -1){
     $marca = $_POST['nova-marca'];
     try{
@@ -70,17 +75,27 @@ if($idcor == -1){
             exit;
         }       
     }
-}
-$nome = $_POST['nome'];
-$preco = number_format($_POST['preço'], 2, '.', '');
-$stock = $_POST['stock'];
-$disponibilidade = 0;
-if($stock > 0){
-    $disponibilidade = 1;
-}
-$descricao = $_POST['descrição'];
+}*/
 
-if(isset($_FILES['imagem']['nome'])){
+$nome = $_POST['nome'];
+if($nome != $produtoData['nome'])
+    changeNome($idproduto, $nome);
+if(!strpos($_POST['preco'], '.'))
+   $preco = number_format($_POST['preço'], 2, '.', '');
+else
+   $preco = $_POST['preço'];
+if($preco != $produtoData['preco'])
+    changePreco($idproduto, $preco);
+$stock = $_POST['stock'];
+if($stock != $produtoData['stock'])
+    changeStock($idproduto, $stock);
+
+$descricao = $_POST['descrição'];
+if($descricao != $produtoData['descricao'])
+    changeDescricao($idproduto, $descricao);
+
+
+if(isset($_FILES['imagem']['nome']) && ($_FILES['imagem']['nome'] != $produtData['imagem'])){
     $target_dir = $BASE_DIR . 'images/products/';
     $target_file = $target_dir . basename($_FILES["imagem"]["name"]);
     $uploadOk = 1;
@@ -101,22 +116,15 @@ if(isset($_FILES['imagem']['nome'])){
         }
     }
     try{
-        createProduct($descricao, $disponibilidade, $nome, $preco, $stock, $idcor, $idversao, $idcategoria, $_FILES["imagem"]["name"]);
+        changeImagem($idproduto, $_FILES["imagem"]["name"]);
     }catch(PDOException $e){
         print $e->getMessage();    
     }
-    $conn->commit();
-    $_SESSION['success_messages'][] = 'Produto adicionado com sucesso';
+    $_SESSION['success_messages'][] = 'Produto modificado com sucesso';
     header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
 else{
-    try{
-        createProduct($descricao, $disponibilidade, $nome, $preco, $stock, $idcor, $idversao, $idcategoria);
-    }catch(PDOException $e){
-        print $e->getMessage();    
-    }
-    $conn->commit();
-    $_SESSION['success_messages'][] = 'Produto adicionado com sucesso';
+    $_SESSION['success_messages'][] = 'Produto modificado com sucesso';
     header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
 

@@ -39,7 +39,7 @@
                                 <div class="form-group">
                                     <label for="password">Password</label>
                                     <div class="input-group">
-                                        <input type="password" class="form-control" id="inputpassword" name="password" placeholder="Introduza a sua password" required>
+                                        <input type="password" class="form-control" id="inputpassword" name="password" placeholder="Introduza a sua password" {literal} pattern=".{8,}" {/literal} maxlength="20" required title="A password tem de ter entre 8 e 20 caracteres">
                                         <span class="input-group-addon"><span class="fa fa-lock fa-fw"></span></span>
                                     </div>
                                     <span class="fa fa-asterisk required-option"></span>
@@ -51,7 +51,7 @@
                                 <div class="form-group">
                                     <label for="rpassword">Confirmar Password</label>
                                     <div class="input-group">
-                                        <input type="password" class="form-control" id="inputrpassword" name="rpassword" placeholder="Volte a introduzir a sua password" required>
+                                        <input type="password" class="form-control" id="inputrpassword" name="rpassword" placeholder="Volte a introduzir a sua password" {literal} pattern=".{8,}" {/literal} maxlength="20" required title="A password tem de ter entre 8 e 20 caracteres">
                                         <span class="input-group-addon"><span class="fa fa-lock fa-fw"></span></span>
                                     </div>
                                     <span class="fa fa-asterisk required-option"></span>

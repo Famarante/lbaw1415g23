@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-21 18:38:54
+<?php /* Smarty version Smarty-3.1.15, created on 2015-05-25 00:09:54
          compiled from "E:\xampp\htdocs\xampp\frmk_loja\templates\admin\adicionar-produto.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12505555ca165935d22-02934708%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '73a0d32c97869e24fa9150cd58f0c6082d411821' => 
     array (
       0 => 'E:\\xampp\\htdocs\\xampp\\frmk_loja\\templates\\admin\\adicionar-produto.tpl',
-      1 => 1432226267,
+      1 => 1432492157,
       2 => 'file',
     ),
   ),
@@ -123,7 +123,7 @@ actions/products/add-product.php" method="post" id="produto-form" enctype="multi
                         <div class="form-group" id="modelo-div">
                             <label class="col-md-2 control-label" for="textinput">Versão</label>
                             <div class="col-md-10">
-                                <input type="text" placeholder="Versão" class="form-control" name="versão">
+                                <input type="text" placeholder="Versão" class="form-control" name="versão" required>
                             </div>
                         </div>
 

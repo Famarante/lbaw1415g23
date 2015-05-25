@@ -73,31 +73,31 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label">Username:</label>
                     <div class="col-md-8">
-                        <input class="form-control" type="text" name="username" value="{$USERDATA.username}">
+                        <input class="form-control" type="text" name="username" value="{$USERDATA.username}" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Password:</label>
                     <div class="col-md-8">
-                        <input class="form-control" type="password" id="password" name="password" value="{$USERDATA.password}">
+                        <input class="form-control" type="password" id="password" name="password" value="{$USERDATA.password}" pattern=".{8,}" maxlength="20" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Repetir password:</label>
                     <div class="col-md-8">
-                        <input class="form-control" type="password" id="rpassword" name="rpassword" value="{$USERDATA.password}">
+                        <input class="form-control" type="password" id="rpassword" name="rpassword" value="{$USERDATA.password}" pattern=".{8,}" maxlength="20" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Nome completo:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="text" name="fullname" value="{$USERDATA.fullname}">
+                        <input class="form-control" type="text" name="fullname" value="{$USERDATA.fullname}" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Email:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="text" name="email" value="{$USERDATA.email}">
+                        <input class="form-control" type="text" name="email" value="{$USERDATA.email}" required>
                     </div>
                 </div>
                 <div class="form-group">

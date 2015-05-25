@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-05-10 01:00:51
+<?php /* Smarty version Smarty-3.1.15, created on 2015-05-25 13:20:33
          compiled from "E:\xampp\htdocs\xampp\frmk_loja\templates\users\register.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:30212553d2d4e3e36e2-47717050%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'a5eb6169a284e09db45b6d6e5ebcd5d56bbb0930' => 
     array (
       0 => 'E:\\xampp\\htdocs\\xampp\\frmk_loja\\templates\\users\\register.tpl',
-      1 => 1431212448,
+      1 => 1432552831,
       2 => 'file',
     ),
   ),
@@ -66,7 +66,7 @@ actions/users/register.php" method="post">
                                 <div class="form-group">
                                     <label for="password">Password</label>
                                     <div class="input-group">
-                                        <input type="password" class="form-control" id="inputpassword" name="password" placeholder="Introduza a sua password" required>
+                                        <input type="password" class="form-control" id="inputpassword" name="password" placeholder="Introduza a sua password"  pattern=".{8,}"  maxlength="20" required title="A password tem de ter entre 8 e 20 caracteres">
                                         <span class="input-group-addon"><span class="fa fa-lock fa-fw"></span></span>
                                     </div>
                                     <span class="fa fa-asterisk required-option"></span>
@@ -78,7 +78,7 @@ actions/users/register.php" method="post">
                                 <div class="form-group">
                                     <label for="rpassword">Confirmar Password</label>
                                     <div class="input-group">
-                                        <input type="password" class="form-control" id="inputrpassword" name="rpassword" placeholder="Volte a introduzir a sua password" required>
+                                        <input type="password" class="form-control" id="inputrpassword" name="rpassword" placeholder="Volte a introduzir a sua password"  pattern=".{8,}"  maxlength="20" required title="A password tem de ter entre 8 e 20 caracteres">
                                         <span class="input-group-addon"><span class="fa fa-lock fa-fw"></span></span>
                                     </div>
                                     <span class="fa fa-asterisk required-option"></span>

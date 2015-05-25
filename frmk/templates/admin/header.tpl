@@ -163,7 +163,7 @@
                                     <a href="adicionar-produto.php">Adicionar produto</a>
                                 </li>
                                 <li>
-                                    <a href="produtos.php">Ver produtos</a>
+                                    <a href="produtos.php?pagina=1">Ver produtos</a>
                                 </li>
                             </ul>
                         </li>
