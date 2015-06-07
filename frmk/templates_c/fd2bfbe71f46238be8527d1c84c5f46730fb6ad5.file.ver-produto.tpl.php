@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2015-06-08 00:17:19
-         compiled from "E:\xampp\htdocs\xampp\frmk_loja\templates\products\ver-produto.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:28627556c2abd413419-64160382%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-07 19:46:38
+         compiled from "C:\xampp\htdocs\frmk\templates\products\ver-produto.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:2308855744163319ee9-12731991%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'dc82b3a78f7b058e934cde5420754cfc59c960fb' => 
+    'fd2bfbe71f46238be8527d1c84c5f46730fb6ad5' => 
     array (
-      0 => 'E:\\xampp\\htdocs\\xampp\\frmk_loja\\templates\\products\\ver-produto.tpl',
-      1 => 1433715437,
+      0 => 'C:\\xampp\\htdocs\\frmk\\templates\\products\\ver-produto.tpl',
+      1 => 1433689518,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '28627556c2abd413419-64160382',
+  'nocache_hash' => '2308855744163319ee9-12731991',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_556c2abd635c49_81250175',
+  'unifunc' => 'content_557441633c7fe5_81408456',
   'variables' => 
   array (
     'BASE_URL' => 0,
@@ -24,7 +24,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_556c2abd635c49_81250175')) {function content_556c2abd635c49_81250175($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_557441633c7fe5_81408456')) {function content_557441633c7fe5_81408456($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 <script src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 javascript/product/comments.js"></script>
@@ -33,13 +33,11 @@ javascript/product/comments.js"></script>
     <div class="container">	
         <div class="col-md-12">
             <div class="vproduct col-md-4 text-center">
-                <img id="item-display" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+                    <img id="item-display" src="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 /images/products/<?php echo $_smarty_tpl->tpl_vars['PRODUTO']->value['imagem'];?>
 " alt="">
             </div>
             <div class="col-md-8">
-                <input id="idproduct" type="number" value="<?php echo $_smarty_tpl->tpl_vars['PRODUTO']->value['idproduto'];?>
-" hidden>
                 <div class="vproduct-title"><?php echo $_smarty_tpl->tpl_vars['PRODUTO']->value['nome'];?>
 </div>
                 <div class="vproduct-model"><?php echo $_smarty_tpl->tpl_vars['PRODUTO']->value['modelo_nome'];?>
@@ -49,9 +47,9 @@ javascript/product/comments.js"></script>
                 <div class="vproduct-price"><?php echo $_smarty_tpl->tpl_vars['PRODUTO']->value['preco'];?>
 €</div>
                 <?php if ($_smarty_tpl->tpl_vars['PRODUTO']->value['disponibilidade']) {?>
-                <div class="vproduct-stock">Em stock</div>
+                    <div class="vproduct-stock">Em stock</div>
                 <?php } else { ?>
-                <div class="vproduct-nstock">Sem Stock</div>
+                    <div class="vproduct-nstock">Sem Stock</div>
                 <?php }?>
                 <hr>
                 <div class="row">
@@ -90,27 +88,29 @@ javascript/product/comments.js"></script>
             </div>
             <div class="tab-pane fade" id="comments">
                 <section class="container">
-                    <div class="row">
+                    <div class="container">
+                        <div class="row">
 
-                        <div class="col-md-10 col-md-offset-1">
+                        <div class="col-md-12">
                             <div class="widget-area no-padding blank">
                                 <div class="status-upload">
-
                                     <form role="form" id="comment-form" action="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
 actions/users/comment.php" method="post">
-                                        <textarea class ="form-group" id="add-comment" name="comment" placeholder="Escreva aqui o seu comentário" required></textarea>
+                                        <textarea class ="form-group" id="add-comment" name="comment" placeholder="Escreva aqui o seu comentário" ></textarea>
                                         <input type="hidden" value=<?php echo $_smarty_tpl->tpl_vars['PRODUTO']->value['idproduto'];?>
  name="idProduct" />
+                                        <input type="hidden" id="date" name="date"/>
+                                        <script>document.getElementById("date").value = new Date().toJSON().slice(0,10)</script>
                                         <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Submeter</button>
                                     </form>
                                 </div><!-- Status Upload  -->
                             </div><!-- Widget Area -->
                         </div>
+
+                        </div>
                     </div>
                 </section>
-                <br>
-                <hr>
-                <section class="container" id="list-comments">
+                <section class="container">
                     
                 </section>
 

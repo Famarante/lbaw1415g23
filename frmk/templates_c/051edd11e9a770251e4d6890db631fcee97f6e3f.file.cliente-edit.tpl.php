@@ -1,4 +1,31 @@
-{include file='common/header.tpl'}
+<?php /* Smarty version Smarty-3.1.15, created on 2015-06-07 15:24:42
+         compiled from "C:\xampp\htdocs\frmk\templates\users\cliente-edit.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:138585574461a181515-25746222%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '051edd11e9a770251e4d6890db631fcee97f6e3f' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\frmk\\templates\\users\\cliente-edit.tpl',
+      1 => 1433683478,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '138585574461a181515-25746222',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'BASE_URL' => 0,
+    'USERDATA' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_5574461a207026_80754702',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_5574461a207026_80754702')) {function content_5574461a207026_80754702($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ('common/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 
 <script>
     $(function() {
@@ -69,47 +96,57 @@
             </div>
             <h3>Informação Pessoal</h3>
 
-            <form class="form-horizontal" role="form" action="{$BASE_URL}actions/clients/cliente-edit.php" method="post">
+            <form class="form-horizontal" role="form" action="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+actions/clients/cliente-edit.php" method="post">
                 <div class="form-group">
                     <label class="col-md-3 control-label">Username:</label>
                     <div class="col-md-8">
-                        <input class="form-control" type="text" name="username" value="{$USERDATA.username}" required>
+                        <input class="form-control" type="text" name="username" value="<?php echo $_smarty_tpl->tpl_vars['USERDATA']->value['username'];?>
+" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Password:</label>
                     <div class="col-md-8">
-                        <input class="form-control" type="password" id="password" name="password" value="{$USERDATA.password}" {literal} pattern=".{8,}" {/literal} maxlength="20" required>
+                        <input class="form-control" type="password" id="password" name="password" value="<?php echo $_smarty_tpl->tpl_vars['USERDATA']->value['password'];?>
+" pattern=".<?php echo 8;?>
+" maxlength="20" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Repetir password:</label>
                     <div class="col-md-8">
-                        <input class="form-control" type="password" id="rpassword" name="rpassword" value="{$USERDATA.password}" {literal} pattern=".{8,}" {/literal} maxlength="20" required>
+                        <input class="form-control" type="password" id="rpassword" name="rpassword" value="<?php echo $_smarty_tpl->tpl_vars['USERDATA']->value['password'];?>
+" pattern=".<?php echo 8;?>
+" maxlength="20" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Nome completo:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="text" name="fullname" value="{$USERDATA.fullname}" required>
+                        <input class="form-control" type="text" name="fullname" value="<?php echo $_smarty_tpl->tpl_vars['USERDATA']->value['fullname'];?>
+" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Email:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="text" name="email" value="{$USERDATA.email}" required>
+                        <input class="form-control" type="text" name="email" value="<?php echo $_smarty_tpl->tpl_vars['USERDATA']->value['email'];?>
+" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">NIF:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="text" name="nif" value="{$USERDATA.nif}">
+                        <input class="form-control" type="text" name="nif" value="<?php echo $_smarty_tpl->tpl_vars['USERDATA']->value['nif'];?>
+">
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-lg-3 control-label">Telefone:</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="text" name="phone" value="{$USERDATA.phone}">
+                        <input class="form-control" type="text" name="phone" value="<?php echo $_smarty_tpl->tpl_vars['USERDATA']->value['phone'];?>
+">
                     </div>
                 </div>
                 <hr>
@@ -141,7 +178,8 @@
                 </div>
             </div>
             <button class="btn btn-primary" id="add-address" type="button">Adicionar morada</button>
-            <form class="form-horizontal" id="address-form" role="form" action="{$BASE_URL}api/add-address.php" method="post" hidden>
+            <form class="form-horizontal" id="address-form" role="form" action="<?php echo $_smarty_tpl->tpl_vars['BASE_URL']->value;?>
+api/add-address.php" method="post" hidden>
                 <div class="form-group">
                     <label class="col-md-3 control-label">Morada:</label>
                     <div class="col-md-8">
@@ -431,4 +469,6 @@
     </div>
 </div>
 <hr>
-{include file='common/footer.tpl'}
+<?php echo $_smarty_tpl->getSubTemplate ('common/footer.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+<?php }} ?>
